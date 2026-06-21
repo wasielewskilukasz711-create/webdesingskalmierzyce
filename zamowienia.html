@@ -109,26 +109,42 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
+    // ustawienie pakietu z URL
+    const params = new URLSearchParams(window.location.search);
+    const pakiet = params.get("pakiet");
+
+    const select = document.getElementById("packageSelect");
+
+    if (select && pakiet) {
+        select.value = pakiet;
+    }
+
+    // animacje strony
     const content = document.getElementById("content");
-    if (!content) return;
 
-    requestAnimationFrame(() => {
-        content.classList.add("page-in");
-    });
+    if (content) {
 
-    document.addEventListener("click", (e) => {
-        const link = e.target.closest("a");
-        if (!link) return;
-        if (link.target === "_blank" || link.href.includes("#")) return;
+        requestAnimationFrame(() => {
+            content.classList.add("page-in");
+        });
 
-        e.preventDefault();
-        content.classList.remove("page-in");
-        content.classList.add("page-out");
+        document.addEventListener("click", (e) => {
+            const link = e.target.closest("a");
 
-        setTimeout(() => {
-            window.location.href = link.href;
-        }, 450);
-    });
+            if (!link) return;
+            if (link.target === "_blank" || link.href.includes("#")) return;
+
+            e.preventDefault();
+
+            content.classList.remove("page-in");
+            content.classList.add("page-out");
+
+            setTimeout(() => {
+                window.location.href = link.href;
+            }, 450);
+        });
+    }
 });
 </script>
 </body>
