@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: 'Manrope', sans-serif;
-    overflow-x: hidden;
     background: #F5F9FF;
+    overflow: auto;
 
 }
 
@@ -341,91 +341,6 @@ form textarea {
     opacity: 0;
     transform: translateY(-15px);
 }
-#onas {
-    max-width: 1100px;
-    margin: 80px auto;
-    padding: 60px;
-
-    background: rgba(255,255,255,0.75);
-    backdrop-filter: blur(15px);
-
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,0.5);
-
-    box-shadow:
-        0 20px 60px rgba(0,0,0,0.08);
-}
-
-#onas h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-    color: #0F172A;
-    margin-bottom: 20px;
-}
-
-#onas h2 {
-    color: #2563EB;
-    margin-top: 40px;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-}
-
-#onas p {
-    color: #475569;
-    line-height: 1.9;
-    font-size: 1.05rem;
-}
-
-#onas ol {
-    margin-top: 30px;
-    padding: 0;
-}
-
-#onas ul {
-    list-style: none;
-    margin-bottom: 20px;
-
-    background: white;
-    border: 1px solid #E2E8F0;
-
-    border-radius: 18px;
-    padding: 20px;
-
-    color: #334155;
-    line-height: 1.7;
-
-    transition: 0.3s ease;
-}
-
-#onas ul:hover {
-    transform: translateY(-4px);
-
-    box-shadow:
-        0 10px 25px rgba(37,99,235,0.12);
-}
-
-#onas ul::before {
-    content: "✓";
-    color: #2563EB;
-    font-weight: 700;
-    margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-
-    #onas {
-        padding: 30px;
-        margin: 40px 15px;
-    }
-
-    #onas h1 {
-        font-size: 2rem;
-    }
-
-    #onas h2 {
-        font-size: 1.25rem;
-    }
-}
 
 /* --- STYLE DLA PODSTRONY PORTFOLIO --- */
 #portfolio-section {
@@ -501,4 +416,175 @@ form textarea {
     border-radius: 999px;
     font-size: 0.8rem;
     font-weight: 600;
+}
+/* --- STYLE DLA PODSTRONY ZAMÓWIEŃ (CENNIK PREMIUM) --- */
+
+#pricing-section {
+    padding: 60px 8%;
+    min-height: 85vh;
+}
+
+.pricing-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+}
+
+.pricing-intro h1 {
+    font-size: 3rem;
+    color: #0F172A;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.pricing-intro p {
+    color: #64748B;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Siatka cennika */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Pojedyncza karta cennika */
+.pricing-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    border-color: #CBD5E1;
+}
+
+/* Wyróżnienie karty najpopularniejszej */
+.pricing-card.popular {
+    border: 2px solid #2563EB;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+}
+
+.pricing-card.popular:hover {
+    box-shadow: 0 25px 50px rgba(37, 99, 235, 0.15);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2563EB;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Nagłówek karty */
+.card-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: #0F172A;
+}
+
+.card-desc {
+    color: #64748B;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 25px 0;
+    min-height: 45px; /* wyrównanie wysokości opisów */
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0F172A;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.price span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #64748B;
+    margin-top: 2px;
+}
+
+/* Lista cech w karcie */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 35px 0;
+}
+
+.pricing-features li {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    line-height: 1.4;
+}
+
+/* Guzik akcji w karcie */
+.pricing-btn {
+    display: block;
+    text-align: center;
+    background: #F1F5F9;
+    color: #0F172A;
+    padding: 14px 20px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.pricing-btn:hover {
+    background: #0F172A;
+    color: #FFFFFF;
+}
+
+/* Przycisk dla karty wyróżnionej */
+.popular .pricing-btn {
+    background: #2563EB;
+    color: #FFFFFF;
+}
+
+.popular .pricing-btn:hover {
+    background: #1D4ED8;
+}
+
+/* Stopka pod cennikiem */
+.pricing-footer-info {
+    text-align: center;
+    margin-top: 50px;
+    color: #475569;
+    font-size: 1rem;
+}
+
+.pricing-footer-info a {
+    color: #2563EB;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.pricing-footer-info a:hover {
+    color: #1D4ED8;
 }
