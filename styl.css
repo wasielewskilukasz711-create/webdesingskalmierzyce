@@ -92,7 +92,10 @@ nav {
     margin-top: 30px;
     margin-bottom: 20px;
 }
-
+a {
+    color: inherit;        /* bierze kolor z rodzica */
+    text-decoration: none; /* usuwa podkreślenie */
+}
 .kontakt-box p {
     color: #64748B;
 }
