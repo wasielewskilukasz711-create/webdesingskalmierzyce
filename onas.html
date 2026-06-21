@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="32x32" href="logo.png">
+    <title>Web Desing Skalmierzyce</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="logo"><span>Web Design Skalmierzyce</span>
+    </div>
+
+    <nav>
+        <a class="naglowekprzycisk" href="index.html">ZAMÓW STRONĘ</a>
+        <a class="naglowekprzycisk" href="kontakt.html">KONTAKT</a>
+        <a class="naglowekprzycisk" href="portfolio.html">PORTFOLIO</a>
+        <a href="szablony.html" class="naglowekprzycisk">SZABLONY</a>
+        <a class="naglowekprzycisk" href="onas.html">O NAS</a>
+    </nav>
+</header>
+<section id="onas" class="onas">
+    <h1>Kim jesteśmy? Tworzymy wizerunek, który sprzedaje.</h1>
+    <h2>Poznaj WebDesign Skalmierzyce – Twój lokalny zespół od zadań specjalnych w sieci.</h2>
+    <p>Cześć! Jest nas dwóch – kumple z dzieciństwa, których od zawsze jarało tworzenie stron internetowych. To, co kiedyś było czystą zajawką, dzisiaj zamieniliśmy w nasz sposób na życie. W WebDesign Skalmierzyce nie wierzymy w masową produkcję identycznych stron z internetu. Wiemy, że każda firma – niezależnie od tego, czy jest to lokalny warsztat samochodowy, elegancki salon fryzjerski, czy dynamicznie rozwijająca się gastronomia – ma swoją unikalną historię i zasługuje na wyjątkową oprawę w sieci.
+
+Jesteśmy zgranym, dwuosobowym zespołem pasjonatów ze Skalmierzyc. Połączyliśmy siły, aby zaoferować małym i średnim przedsiębiorstwom jakość, która do tej pory była rezerwowana wyłącznie dla wielkich korporacji z ogromnymi budżetami marketingowymi. Naszym celem jest przełamanie stereotypu, że nowoczesna, unikalna i szybka strona internetowa musi kosztować fortunę.</p>
+    <h2>Dlaczego warto z nami współpracować?</h2>
+    <p>Działamy zupełnie inaczej niż bezosobowe agencje interaktywne. Jesteśmy bardzo elastyczni, otwarci na nietypowe pomysły i gotowi na wyzwania. Wybierając nas, zyskujesz partnerów, którzy osobiście angażują się w Twój sukces:</p>
+    <ol>
+        <ul>Zero gotowych szablonów: Każdą stronę projektujemy i kodujemy od absolutnego zera. Zapomnij o nudnych schematach, które wyglądają tak samo. Twój projekt będzie jedyny w swoim rodzaju.</ul>
+        <ul>Dedykowany duet specjalistów: Od pierwszego maila, przez proces projektowy, aż po uruchomienie strony – rozmawiasz i współpracujesz bezpośrednio z nami. Nie ma tu pośredników ani doradców klienta. Słuchamy, doradzamy i działamy</ul>
+        <ul>Estetyka klasy premium & Mobile First: Dbamy o każdy piksel. Projektujemy minimalistyczne, eleganckie i przejrzyste strony, które budują natychmiastowe zaufanie. Ponieważ ponad połowa użytkowników szuka usług na smartfonach, nasze projekty są perfekcyjnie dopasowane do telefonów, dzięki czemu klient bez trudu znajdzie Twój numer i do Ciebie zadzwoni.</ul>
+        <ul>Lokalne wsparcie i uczciwe zasady: Jesteśmy stąd. Cenimy transparentność – u nas nie znajdziesz ukrytych kosztów ani abonamentów-pułapek. Oferujemy proste rozliczenia i stałą opiekę techniczną, byś Ty mógł zająć się tym, co potrafisz najlepiej – prowadzeniem swojego biznesu.</ul>
+    </ol>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const content = document.getElementById("content");
+
+    if (!content) return;
+
+    // wejście strony
+    requestAnimationFrame(() => {
+        content.classList.add("page-in");
+    });
+
+    // przejścia między stronami
+    document.addEventListener("click", (e) => {
+
+        const link = e.target.closest("a");
+
+        if (!link) return;
+
+        // ignoruj external i kotwice
+        if (link.target === "_blank" || link.href.includes("#")) return;
+
+        e.preventDefault();
+
+        // start animacji OUT
+        content.classList.remove("page-in");
+        content.classList.add("page-out");
+
+        // po animacji zmiana strony
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 450);
+    });
+
+});
+</script>
+</body>
+</html>
