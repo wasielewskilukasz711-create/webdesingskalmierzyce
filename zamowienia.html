@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" sizes="32x32" href="logo.png">
-    <title>Web Desing Skalmierzyce</title>
+    <title>Web Design Skalmierzyce - Zamów Stronę</title>
     <link rel="stylesheet" href="styl.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,60 +12,123 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <header>
     <div class="logo">
         <img src="logo.png" alt="logo"><span>Web Design Skalmierzyce</span>
     </div>
 
     <nav>
-        <a class="naglowekprzycisk" href="index.html">STRONA GŁÓWNA</a>
+        <a class="naglowekprzycisk" href="zamowienia.html">ZAMÓW STRONĘ</a>
         <a class="naglowekprzycisk" href="kontakt.html">KONTAKT</a>
         <a class="naglowekprzycisk" href="portfolio.html">PORTFOLIO</a>
         <a class="naglowekprzycisk" href="onas.html">O NAS</a>
     </nav>
 </header>
-<main id="content">
-<section class="usługi">
-    <button class="usluga"><img src="strona.png" alt="strona">CENA 200ZŁ / 3 MIESIĄCĘ</button>
-    <button class="usluga"><img src="nowastrona.png" alt="strona">WYCENA PO KONSULTACJI</button>
-    <button class="usluga"><img src="szablon.png" alt="strona">PRZYKŁADOWE SZABLONY</button>
 
+<main id="content">
+<section id="pricing-section">
+    <div class="pricing-intro">
+        <div class="badge">💎 Proste i przejrzyste zasady</div>
+        <h1>Wybierz pakiet dla swojego biznesu</h1>
+        <p>Nie lubimy ukrytych kosztów. Oferujemy bezkonkurencyjną jakość premium dostosowaną do budżetu lokalnych firm. Wybierz opcję i zacznij zdobywać klientów online.</p>
+    </div>
+
+    <!-- Trzy nowoczesne kolumny cenowe -->
+    <div class="pricing-grid">
+
+        <!-- Karta 1: Strona One-Page -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <h3>Wizytówka One-Page</h3>
+                <p class="card-desc">Idealna dla małych firm usługowych, które chcą profesjonalnie zaistnieć w Google.</p>
+                <div class="price">1200 zł <span>opłata jednorazowa</span></div>
+            </div>
+            <div class="card-body">
+                <ul class="pricing-features">
+                    <li>✓ Nowoczesny projekt na jednej stronie</li>
+                    <li>✓ Pełna responsywność (smartfony i tablety)</li>
+                    <li>✓ Sekcja Kontakt z interaktywną mapą Google</li>
+                    <li>✓ Szybki formularz kontaktowy</li>
+                    <li>✓ Podstawowa optymalizacja SEO pod Twoje miasto</li>
+                    <li>✓ Certyfikat SSL (bezpieczna zielona kłódeczka)</li>
+                </ul>
+                <a href="kontakt.html?pakiet=onepage" class="pricing-btn">Wybieram wizytówkę</a>
+            </div>
+        </div>
+
+        <!-- Karta 2: Strona Premium Multi-Page (Wyróżniona jako rekomendowana) -->
+        <div class="pricing-card popular">
+            <div class="popular-badge">Najpopularniejszy</div>
+            <div class="card-header">
+                <h3>Biznes Premium</h3>
+                <p class="card-desc">Rozbudowana strona www idealna dla firm chcących szczegółowo opisać swoje usługi i budować prestiż.</p>
+                <div class="price">1800 zł <span>opłata jednorazowa</span></div>
+            </div>
+            <div class="card-body">
+                <ul class="pricing-features">
+                    <li>✓ Indywidualny projekt do 5 podstron</li>
+                    <li>✓ Zaawansowana optymalizacja szybkości ładowania</li>
+                    <li>✓ Teksty dopasowane pod pozycjonowanie w Google</li>
+                    <li>✓ Pełna responsywność i nowoczesna estetyka</li>
+                    <li>✓ Integracja z mediami społecznościowymi</li>
+                    <li>✓ Formularz + bezpośrednie kliknięcie telefonu/maila</li>
+                    <li>✓ Darmowa opieka techniczna na pierwszy miesiąc</li>
+                </ul>
+                <a href="kontakt.html?pakiet=premium" class="pricing-btn">Wybieram Biznes Premium</a>
+            </div>
+        </div>
+
+        <!-- Karta 3: Wsparcie techniczne -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <h3>Opieka i Bezpieczeństwo</h3>
+                <p class="card-desc">Zapomnij o problemach technicznych. My dbamy o serwer, aktualizacje i stabilność Twojej strony.</p>
+                <div class="price">250 zł <span>za pół roku (~41zł/msc)</span></div>
+            </div>
+            <div class="card-body">
+                <ul class="pricing-features">
+                    <li>✓ Utrzymanie i konfiguracja luksusowego, szybkiego hostingu</li>
+                    <li>✓ Opieka nad domeną i jej terminowe przedłużanie</li>
+                    <li>✓ Comiesięczna aktualizacja wtyczek i motywów (Bezpieczeństwo)</li>
+                    <li>✓ Regularne kopie zapasowe (backup strony)</li>
+                    <li>✓ Drobne zmiany w tekstach/godzinach (do 1h w miesiącu)</li>
+                    <li>✓ Stały monitoring stabilności przed wirusami i awariami</li>
+                </ul>
+                <a href="kontakt.html?pakiet=opieka" class="pricing-btn">Wybieram opiekę</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="pricing-footer-info">
+        <p>💡 <strong>Nie wiesz, co wybrać?</strong> Masz nietypowy projekt lub potrzebujesz indywidualnej wyceny? Żaden problem! <a href="kontakt.html">Napisz do nas</a> – wspólnie dobierzemy idealne rozwiązanie dla Ciebie.</p>
+    </div>
 </section>
 </main>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-
     const content = document.getElementById("content");
-
     if (!content) return;
 
-    // wejście strony
     requestAnimationFrame(() => {
         content.classList.add("page-in");
     });
 
-    // przejścia między stronami
     document.addEventListener("click", (e) => {
-
         const link = e.target.closest("a");
-
         if (!link) return;
-
-        // ignoruj external i kotwice
         if (link.target === "_blank" || link.href.includes("#")) return;
 
         e.preventDefault();
-
-        // start animacji OUT
         content.classList.remove("page-in");
         content.classList.add("page-out");
 
-        // po animacji zmiana strony
         setTimeout(() => {
             window.location.href = link.href;
         }, 450);
     });
-
 });
 </script>
 </body>
