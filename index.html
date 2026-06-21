@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="32x32" href="logo.png">
+    <title>Web Desing Skalmierzyce</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="logo"><span>Web Design Skalmierzyce</span>
+    </div>
+
+    <nav>
+        <a class="naglowekprzycisk" href="index.html">ZAMÓW STRONĘ</a>
+        <a class="naglowekprzycisk" href="kontakt.html">KONTAKT</a>
+        <a class="naglowekprzycisk" href="portfolio.html">PORTFOLIO</a>
+        <a href="szablony.html" class="naglowekprzycisk">SZABLONY</a>
+        <a class="naglowekprzycisk" href="onas.html">O NAS</a>
+    </nav>
+</header>
+<main id="content">
+<section id="hero">
+    <div class="hero-left">
+
+        <div class="badge">
+            🚀 Tworzymy nowoczesne strony internetowe
+        </div>
+
+        <h1>
+            Strony internetowe,<br>
+            które zdobywają klientów
+        </h1>
+
+        <p>
+            Projektujemy szybkie, nowoczesne i responsywne strony
+            dla firm, usług i lokalnych biznesów.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="zamowienia.html" class="btn-primary">Zamów stronę</a>
+            <a href="portfolio.html" class="btn-secondary">Portfolio</a>
+        </div>
+
+        <div class="features">
+            <span>✓ Responsywność</span>
+            <span>✓ SEO</span>
+            <span>✓ Szybka realizacja</span>
+            <span>✓ Nowoczesny design</span>
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+        
+    </div>
+</section>
+</main>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const content = document.getElementById("content");
+
+    if (!content) return;
+
+    // wejście strony
+    requestAnimationFrame(() => {
+        content.classList.add("page-in");
+    });
+
+    // przejścia między stronami
+    document.addEventListener("click", (e) => {
+
+        const link = e.target.closest("a");
+
+        if (!link) return;
+
+        // ignoruj external i kotwice
+        if (link.target === "_blank" || link.href.includes("#")) return;
+
+        e.preventDefault();
+
+        // start animacji OUT
+        content.classList.remove("page-in");
+        content.classList.add("page-out");
+
+        // po animacji zmiana strony
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 450);
+    });
+
+});
+</script>
+</body>
+</html>
