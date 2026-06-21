@@ -588,3 +588,88 @@ form textarea {
 .pricing-footer-info a:hover {
     color: #1D4ED8;
 }
+#onas {
+    max-width: 1100px;
+    margin: 80px auto;
+    padding: 60px;
+
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(15px);
+
+    border-radius: 30px;
+    border: 1px solid rgba(255,255,255,0.5);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.08);
+}
+
+#onas h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    color: #0F172A;
+    margin-bottom: 20px;
+}
+
+#onas h2 {
+    color: #2563EB;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+#onas p {
+    color: #475569;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+#onas ol {
+    margin-top: 30px;
+    padding: 0;
+}
+
+#onas ul {
+    list-style: none;
+    margin-bottom: 20px;
+
+    background: white;
+    border: 1px solid #E2E8F0;
+
+    border-radius: 18px;
+    padding: 20px;
+
+    color: #334155;
+    line-height: 1.7;
+
+    transition: 0.3s ease;
+}
+
+#onas ul:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(37,99,235,0.12);
+}
+
+#onas ul::before {
+    content: "✓";
+    color: #2563EB;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+
+    #onas {
+        padding: 30px;
+        margin: 40px 15px;
+    }
+
+    #onas h1 {
+        font-size: 2rem;
+    }
+
+    #onas h2 {
+        font-size: 1.25rem;
+    }
+}
