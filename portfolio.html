@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="32x32" href="logo.png">
+    <title>Web Design Skalmierzyce - Portfolio</title>
+    <link rel="stylesheet" href="styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="logo"><span>Web Design Skalmierzyce</span>
+    </div>
+
+    <nav>
+        <a class="naglowekprzycisk" href="zamowienia.html">ZAMÓW STRONĘ</a>
+        <a class="naglowekprzycisk" href="kontakt.html">KONTAKT</a>
+        <a class="naglowekprzycisk" href="portfolio.html">PORTFOLIO</a>
+        <a class="naglowekprzycisk" href="onas.html">O NAS</a>
+    </nav>
+</header>
+
+<main id="content">
+<section id="portfolio-section">
+    <div class="portfolio-intro">
+        <h1>Nasze Realizacje</h1>
+        <p>Zobacz projekty, które pomagają lokalnym biznesom rosnąć w siłę i zdobywać zaufanie klientów w sieci.</p>
+    </div>
+
+    <!-- Tutaj dodawać projekty: -->
+    <div class="portfolio-grid">
+
+        <div class="portfolio-item">
+            <div class="portfolio-img-placeholder">
+                <span>Visual Preview Premium</span>
+            </div>
+            <div class="portfolio-info">
+                <h3>Salon Kosmetyczny / Fryzjer</h3>
+                <p>Nowoczesna wizytówka z systemem rezerwacji telefonicznej.</p>
+                <span class="tag">Design Premium</span>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-img-placeholder">
+                <span>Visual Preview Premium</span>
+            </div>
+            <div class="portfolio-info">
+                <h3>Warsztat Samochodowy / Mechanika</h3>
+                <p>Szybka strona typu One-Page z optymalizacją pod Google Maps.</p>
+                <span class="tag">Szybkie Ładowanie</span>
+            </div>
+        </div>
+
+        <div class="portfolio-item">
+            <div class="portfolio-img-placeholder">
+                <span>Visual Preview Premium</span>
+            </div>
+            <div class="portfolio-info">
+                <h3>Lokalna Gastronomia / Restauracja</h3>
+                <p>Przejrzyste menu online przystosowane do urządzeń mobilnych.</p>
+                <span class="tag">Mobile Friendly</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+</main>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const content = document.getElementById("content");
+    if (!content) return;
+
+    requestAnimationFrame(() => {
+        content.classList.add("page-in");
+    });
+
+    document.addEventListener("click", (e) => {
+        const link = e.target.closest("a");
+        if (!link) return;
+        if (link.target === "_blank" || link.href.includes("#")) return;
+
+        e.preventDefault();
+        content.classList.remove("page-in");
+        content.classList.add("page-out");
+
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 450);
+    });
+});
+</script>
+</body>
+</html>
