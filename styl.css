@@ -741,3 +741,53 @@ select:focus {
     border-color: #2563EB;
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
+
+/* --- DOPISEK: uczciwe portfolio (zrealizowane vs w przygotowaniu) --- */
+
+.portfolio-item--soon {
+    opacity: 0.75;
+}
+
+.portfolio-item--live {
+    border-color: #2563EB;
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+}
+
+.portfolio-img--dark {
+    background: linear-gradient(135deg, #0F172A 0%, #7C2D12 100%);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.tag--live {
+    background: rgba(37, 99, 235, 0.12);
+    color: #2563EB;
+}
+
+.tag--soon {
+    background: rgba(100, 116, 139, 0.12);
+    color: #64748B;
+}
+
+.portfolio-link {
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #2563EB;
+}
+
+.portfolio-link:hover {
+    color: #1D4ED8;
+}
+
+.portfolio-quote {
+    border-top: 1px dashed #E2E8F0;
+    padding-top: 14px;
+    margin-top: 10px;
+}
+
+.quote-placeholder {
+    font-style: italic;
+    color: #94A3B8;
+    font-size: 0.9rem;
+}
