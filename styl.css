@@ -791,3 +791,75 @@ select:focus {
     color: #94A3B8;
     font-size: 0.9rem;
 }
+
+/* --- DOPISEK: crossfade slideshow w hero-right --- */
+
+.hero-slideshow {
+    position: relative;
+    width: 440px;
+    height: 440px;
+    max-width: 90vw;
+    border-radius: 28px;
+    overflow: hidden;
+    border: 6px solid #FFFFFF;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.18);
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.1s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.55) saturate(1.05);
+}
+
+.hero-slide-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 1.7rem;
+    letter-spacing: 0.3px;
+    text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease;
+}
+
+.hero-slide-label:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 992px) {
+    .hero-slideshow {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+    }
+    .hero-slideshow {
+        width: 300px;
+        height: 300px;
+    }
+}
+
