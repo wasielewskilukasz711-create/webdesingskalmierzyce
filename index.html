@@ -302,7 +302,7 @@
         }
 
         /* ==========================================================================
-           5. MOCKUP WIZUALNY (POWIĘKSZONY)
+           5. MOCKUP WIZUALNY
            ========================================================================== */
         .hero-visual {
             position: relative;
@@ -314,7 +314,7 @@
 
         .browser-card {
             width: 100%;
-            max-width: 680px; /* Zwiększono rozmiar mockupu */
+            max-width: 680px;
             background: rgba(16, 18, 31, 0.85);
             border: 1px solid var(--c-glass-border);
             border-radius: 24px;
@@ -368,7 +368,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
+        }
+
+        .mock-hero-text span {
+            display: block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--c-cyan);
+            margin-bottom: 6px;
+            font-weight: 600;
         }
 
         .mock-title {
@@ -379,17 +389,14 @@
         }
 
         .mock-orb {
-            width: 75px;
-            height: 75px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--c-blue), var(--c-cyan));
-            box-shadow: 0 0 30px var(--c-blue);
+            font-size: 2rem;
+            color: var(--c-lavender);
             animation: pulseOrb 3s ease-in-out infinite alternate;
         }
 
         @keyframes pulseOrb {
             0% { transform: scale(0.9); opacity: 0.8; }
-            100% { transform: scale(1.1); opacity: 1; }
+            100% { transform: scale(1.2); opacity: 1; }
         }
 
         .mock-stats {
@@ -401,6 +408,7 @@
             border-radius: 16px;
             border: 1px solid var(--c-glass-border);
             text-align: center;
+            margin-bottom: 24px;
         }
 
         .mock-stats strong {
@@ -414,6 +422,22 @@
         .mock-stats span {
             font-size: 0.8rem;
             color: var(--c-muted);
+        }
+
+        .mock-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--c-glass-border);
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            color: var(--c-muted);
+        }
+
+        .mock-footer strong {
+            color: var(--c-text);
         }
 
         /* ==========================================================================
@@ -481,6 +505,14 @@
                 box-shadow: 0 20px 40px rgba(0,0,0,0.5);
             }
             nav.active { display: flex; }
+            .mock-stats {
+                grid-template-columns: 1fr;
+            }
+            .mock-footer {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -509,12 +541,12 @@
 <main id="content">
     <section id="hero">
         <div class="hero-left">
-            <div class="badge hero-anim">Strony internetowe dla Twojej branży</div>
+            <div class="badge hero-anim">Tworzymy strony internetowe dla każdej branży</div>
             <h1 class="hero-anim">
-                Projektujemy strony,<br>które budują biznes
+                Strony internetowe,<br>które zdobywają klientów
             </h1>
             <p class="hero-anim">
-                Tworzymy wydajne, nowoczesne i szybkie witryny nastawione na konwersję. Podnieś prestiż swojej marki w sieci.
+                Projektujemy szybkie, nowoczesne i responsywne strony dla firm, usług i lokalnych biznesów — niezależnie od branży.
             </p>
             <div class="hero-buttons hero-anim">
                 <a href="zamowienia.html" class="btn-primary">Zamów stronę</a>
@@ -522,9 +554,9 @@
             </div>
             <div class="features hero-anim">
                 <span>Responsywność</span>
-                <span>Optymalizacja SEO</span>
-                <span>Szybkie ładowanie</span>
-                <span>Unikalny Design</span>
+                <span>SEO</span>
+                <span>Szybka realizacja</span>
+                <span>Nowoczesny design</span>
             </div>
         </div>
 
@@ -536,26 +568,26 @@
                 </div>
                 <div class="browser-body">
                     <div class="mock-hero">
-                        <div>
-                            <div class="mock-title">Nowoczesny Design<br>Dla Twojej Firmy</div>
+                        <div class="mock-hero-text">
+                            <span>SWdesign</span>
+                            <div class="mock-title">NOWOCZESNA STRONA<br>Twoja marka.<br>Lepsza obecność.</div>
                         </div>
-                        <div class="mock-orb"></div>
+                        <div class="mock-orb">✦</div>
                     </div>
                     <div class="mock-stats">
-                        <div><strong>+42%</strong><span>Konwersja</span></div>
-                        <div><strong>1.2s</strong><span>Szybkość</span></div>
-                        <div><strong>100%</strong><span>SEO Score</span></div>
+                        <div><strong>+42%</strong><span>konwersji</span></div>
+                        <div><strong>1.2s</strong><span>ładowania</span></div>
+                        <div><strong>98</strong><span>SEO score</span></div>
+                    </div>
+                    <div class="mock-footer">
+                        <span>Premium design — gotowe na mobile</span>
+                        <span>Strona działa <strong>24/7 online</strong></span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="industry-ticker">
-            <div class="industry-ticker-track">
-                <span>Restauracje</span><span>Warsztaty</span><span>Salony Beauty</span><span>Gabinety</span><span>Sklepy</span><span>Kancelarie</span><span>Hotels</span><span>Fitness</span>
-                <span>Restauracje</span><span>Warsztaty</span><span>Salony Beauty</span><span>Gabinety</span><span>Sklepy</span><span>Kancelarie</span><span>Hotels</span><span>Fitness</span>
-            </div>
-        </div>
+
     </section>
 </main>
 
